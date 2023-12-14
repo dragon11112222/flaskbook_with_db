@@ -10,7 +10,7 @@ def create_app():
 
 
     app.config.from_mapping(SECRET_KEY = '9dghh4g510frf7g1dgf2h6d4g', 
-                            SQLALCHEMY_DATABASE_URI = f'sqlite:///{Path(__file__).parent.parent / 'local.sqlite'}', 
+                            SQLALCHEMY_DATABASE_URI = f"sqlite:///{Path(__file__).parent.parent / 'local.sqlite'}", 
                             SQLALCHEMY_TRACK_MODIFICATIONS = False)
     db.init_app(app)  ## SQLAlchemy와 app 연계
     Migrate(app, db)  ## Migrate와 app 연계
